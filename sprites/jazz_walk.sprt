@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<sprite>
+  <shader>shaders/jazz_walk.shdr</shader>
+  <width>57</width>
+  <height>64</height>
+  <offsetX>0</offsetX>
+  <offsetY>0</offsetY>
+  <numFrames>8</numFrames>
+  <framesPerRow>8</framesPerRow>
+  <numRows>1</numRows>
+</sprite>
+

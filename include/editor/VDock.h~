@@ -1,0 +1,29 @@
+#ifndef __VDOCK_H__
+#define __VDOCK_H__
+
+#include <glib.h>
+#include <glib-object.h>
+
+#include <gui/Dock.h>
+
+#define VDOCK_TYPE		(vdock_get_type())
+#define VDOCK(obj)		(G_TYPE_CHECK_INSTANCE_CAST ((obj), VDOCK_TYPE, VDock))
+#define VDOCK_CAST(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass), VDOCK_TYPE, VDockClass))
+#define IS_VDOCK(obj)		(G_TYPE_CHECK_INSTANCE_TYPE ((obj), VDOCK_TYPE))
+#define IS_VDOCK_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass), VDOCK_TYPE)
+
+struct VDock
+{
+	Dock dock;
+};
+
+struct VDockClass
+{
+	DockClass dock_class;
+};
+
+GType		vdock_get_type		();
+GtkWidget*	vdock_new		();
+
+#endif // !__VDOCK_H__
+

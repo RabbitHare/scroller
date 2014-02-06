@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<sprite>
+  <shader>shaders/jazz_jump_forward.shdr</shader>
+  <width>60</width>
+  <height>60</height>
+  <offsetX>0</offsetX>
+  <offsetY>0</offsetY>
+  <firstFrame>0</firstFrame>
+  <numFrames>11</numFrames>
+  <framesPerRow>8</framesPerRow>
+  <numRows>2</numRows>
+</sprite>
+

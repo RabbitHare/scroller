@@ -1,0 +1,32 @@
+<config>
+	<display>
+		<width>640</width>
+		<height>480</height>
+		<fullscreen>false</fullscreen>
+	</display>
+	<keyBindings>
+		<keyboard1>
+			<right>keyRight</right>
+			<left>keyLeft</left>
+			<up>keyUp</up>
+			<down>keyDown</down>
+			<jump>keySpace</jump>
+			<run>keyLShift</run>
+			<fire>keyLCtrl</fire>
+			<cycle>keyEnter</cycle>
+		</keyboard1>
+		<joystick1>
+			<right>right</right>
+			<left>left</left>
+			<up>3</up>
+			<down>down</down>
+			<jump>1</jump>
+			<run>4</run>
+			<fire>5</fire>
+			<cycle>3</cycle>
+		</joystick1>
+	</keyBindings>
+	<player1>
+		<input>keyboard1</input>
+	</player1>
+</config>

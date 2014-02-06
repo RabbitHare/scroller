@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<sprite>
+  <fps>10</fps>
+  <shader>shaders/bullet1.shdr</shader>
+  <width>32</width>
+  <height>32</height>
+  <offsetX>0</offsetX>
+  <offsetY>0</offsetY>
+  <firstFrame>0</firstFrame>
+  <numFrames>1</numFrames>
+  <framesPerRow>1</framesPerRow>
+  <numRows>1</numRows>
+</sprite>
+

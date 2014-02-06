@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gameObjects>
+  <enemy>
+    <name>NormTurt</name>
+    <desc>Norm turt</desc>
+  </enemy>
+  <enemy>
+    <name>Bee</name>
+    <desc>Bee</desc>
+  </enemy>
+  <modifier>
+    <name>StartPos</name>
+    <desc>Start position</desc>
+  </modifier>
+  <modifier>
+    <name>EnemyStop</name>
+    <desc>Enemy stop</desc>
+  </modifier>
+</gameObjects>
+

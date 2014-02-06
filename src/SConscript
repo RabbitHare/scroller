@@ -1,0 +1,27 @@
+import glob
+
+Import('env','gameObjs')
+
+src = [	'ObjLoader.cpp',
+	'Tileset.cpp',
+	'Camera.cpp',
+	'Texture.cpp',
+	'Collision.cpp',
+	'Keys.cpp',
+	'Config.cpp',
+	'Player.cpp',
+	'Map.cpp',
+	'Layer.cpp',
+	'Renderer.cpp',
+	'TMesh.cpp',
+	'Sprite.cpp',
+	'Entity.cpp',
+	'GObjType.cpp',
+	'GameLoadSave.cpp',
+	'Bullet1.cpp',
+	'TurtleShell.cpp',
+	'NormTurt.cpp']
+
+objs = env.SharedObject(src)
+gameObjs.append(objs)
+

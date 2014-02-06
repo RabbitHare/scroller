@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<shader>
+  <texture>images/bullet1.png</texture>
+  <interp>linear</interp>
+</shader>
+

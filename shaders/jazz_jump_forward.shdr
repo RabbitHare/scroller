@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<shader>
+  <texture>images/jazz_jump_forward.png</texture>
+  <interp>linear</interp>
+</shader>
+

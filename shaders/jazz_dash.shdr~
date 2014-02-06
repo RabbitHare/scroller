@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<shader>
+  <texture>"jazz_dash.png"</texture>
+  <interp>linear</interp>
+</shader>
+

@@ -1,0 +1,61 @@
+#include <gui/HDock.h>
+
+#include <gtk/gtk.h>
+
+static void hdock_init (HDock *self);
+
+GType
+hdock_get_type ()
+{
+	static GType hd_type = 0;
+
+	if (!hd_type)
+	{
+		static GTypeInfo hd_info =
+		{
+			sizeof (HDockClass),
+			NULL, // base_init
+			NULL, // base_finalize
+			NULL, // class_init
+			NULL, // class_finalize
+			NULL, // class_data
+			sizeof (HDock),
+			0,
+			(GInstanceInitFunc) hdock_init,
+		};
+
+		hd_type = g_type_register_static (DOCK_TYPE, "HDock", &hd_info, GTypeFlags(0));
+	}
+
+	return hd_type;
+}
+
+GtkWidget*
+hdock_new ()
+{
+	return GTK_WIDGET (g_object_new (HDOCK_TYPE, NULL));
+}
+/*
+================
+ hdock_init
+================
+*/
+static void
+hdock_init (HDock *self)
+{
+	Dock *dock = DOCK (self);
+
+	dock->dest1 = gtk_frame_new (NULL);
+	dock->dest2 = gtk_frame_new (NULL);
+
+	gtk_widget_set_size_request (dock->dest1, 7, -1);
+	gtk_widget_set_size_request (dock->dest2, 7, -1);
+
+	gtk_table_attach (GTK_TABLE (dock), dock->dest1, 0, 1, 0, 3,
+			(GtkAttachOptions)0, (GtkAttachOptions)(GTK_EXPAND|GTK_FILL), 0, 0);
+	gtk_table_attach (GTK_TABLE (dock), dock->dest2, 2, 3, 0, 3,
+			(GtkAttachOptions)0, (GtkAttachOptions)(GTK_EXPAND|GTK_FILL), 0, 0);
+
+	gtk_widget_show (dock->dest1);
+	gtk_widget_show (dock->dest2);
+}

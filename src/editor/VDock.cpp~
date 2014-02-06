@@ -1,0 +1,114 @@
+#include <gui/VDock.h>
+
+#include <gtk/gtk.h>
+
+static void vdock_init (VDock *self);
+
+GType
+vdock_get_type ()
+{
+	static GType vd_type = 0;
+
+	if (!vd_type)
+	{
+		static GTypeInfo vd_info =
+		{
+			sizeof (VDockClass),
+			NULL, // base_init
+			NULL, // base_finalize
+			NULL, // class_init
+			NULL, // class_finalize
+			NULL, // class_data
+			sizeof (VDock),
+			0,
+			(GInstanceInitFunc) vdock_init,
+		};
+
+		vd_type = g_type_register_static (DOCK_TYPE, "VDock", &vd_info, GTypeFlags(0));
+	}
+
+	return vd_type;
+}
+
+GtkWidget*
+vdock_new ()
+{
+	return GTK_WIDGET (g_object_new (VDOCK_TYPE, NULL));
+}
+static void
+deactivate_cb (GtkWidget *widget)
+{
+	puts ("destroy");
+	gtk_widget_destroy (widget);
+}
+static gboolean
+button_press_cb (GtkWidget 	  *widget,
+		   GdkEventButton *event)
+{
+	puts ("button pressed");
+	GtkWidget *menu,
+		  *menu_item;
+	
+	if (event->button == 3)
+	{
+		menu = gtk_menu_new ();
+
+		menu_item = gtk_menu_item_new_with_label ("Flip");
+
+		gtk_menu_shell_append (GTK_MENU_SHELL (menu), menu_item);
+
+		gtk_menu_popup (GTK_MENU (menu),
+				NULL, NULL, NULL,NULL,
+				3, event->time);
+		g_signal_connect (G_OBJECT (menu), "deactivate",
+				  G_CALLBACK (deactivate_cb), NULL);
+
+		gtk_widget_show_all (menu);
+	}
+	return TRUE;
+}
+/*
+================
+ vdock_init
+================
+*/
+static void
+vdock_init (VDock *self)
+{
+	Dock *dock = DOCK (self);
+	GtkWidget *frame;
+
+	dock->dest1 = gtk_event_box_new ();
+	dock->dest2 = gtk_event_box_new ();
+
+	gtk_event_box_set_visible_window (GTK_EVENT_BOX (dock->dest1), FALSE);
+	gtk_event_box_set_visible_window (GTK_EVENT_BOX (dock->dest2), FALSE);
+
+	gtk_widget_set_size_request (dock->dest1, -1, 7);
+	gtk_widget_set_size_request (dock->dest2, -1, 7);
+
+	gtk_table_attach (GTK_TABLE (dock), dock->dest1, 0, 3, 0, 1,
+			(GtkAttachOptions)(GTK_EXPAND|GTK_FILL), (GtkAttachOptions)0, 0, 0);
+	gtk_table_attach (GTK_TABLE (dock), dock->dest2, 0, 3, 2, 3,
+			(GtkAttachOptions)(GTK_EXPAND|GTK_FILL), (GtkAttachOptions)0, 0, 0);
+
+	g_signal_connect (G_OBJECT (dock->dest1), "button_press_event",
+				    G_CALLBACK (button_press_cb), NULL);
+	g_signal_connect (G_OBJECT (dock->dest2), "button_press_event",
+				    G_CALLBACK (button_press_cb), NULL);
+
+	gtk_widget_set_events (dock->dest1,
+			       GDK_BUTTON_PRESS_MASK);
+	gtk_widget_set_events (dock->dest2,
+			       GDK_BUTTON_PRESS_MASK);
+
+	// add frame to each
+	frame = gtk_frame_new (NULL);
+	gtk_container_add (GTK_CONTAINER (dock->dest1), frame);
+
+	frame = gtk_frame_new (NULL);
+	gtk_container_add (GTK_CONTAINER (dock->dest2), frame);
+
+	gtk_widget_show_all (dock->dest1);
+	gtk_widget_show_all (dock->dest2);
+}

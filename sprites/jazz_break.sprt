@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<sprite>
+  <fps>20</fps>
+  <shader>shaders/jazz_dash.shdr</shader>
+  <width>70</width>
+  <height>64</height>
+  <offsetX>0</offsetX>
+  <offsetY>0</offsetY>
+  <firstFrame>4</firstFrame>
+  <numFrames>6</numFrames>
+  <framesPerRow>10</framesPerRow>
+  <numRows>2</numRows>
+</sprite>
+
