@@ -83,26 +83,3 @@ void Layer::Render (Camera &camera)
 
 }
 
-void Layer::AddEntity (Entity *ent)
-{
-	if (ent->GetLayer()) ent->GetLayer()->RemoveEntity(ent);
-
-	ent->next = entities;
-	if (entities)
-		entities->prev = ent;
-	ent->prev = NULL;
-	entities = ent;
-	ent->SetLayer (this);
-}
-void Layer::RemoveEntity (Entity *ent)
-{
-	if (ent->GetLayer() != this) return;
-
-	if (ent->next)
-		ent->next->prev = ent->prev;
-	if (entities == ent)
-		entities = ent->next;
-	else
-		ent->prev->next = ent->next;
-	ent->SetLayer (NULL);
-}

@@ -2,7 +2,6 @@
 #define __LAYER_H__
 
 #include <stddef.h>
-#include <Entity.h>
 #include <string>
 
 struct Camera;
@@ -11,7 +10,6 @@ struct Layer
 {
 	Layer *next,*prev;
 	int tileset;
-	Entity* entities;
 	std::string name;
 
 	int width,height; // in tiles
@@ -21,7 +19,6 @@ struct Layer
 	Layer ()
 	{
 		tileset = 0;
-		entities = NULL;
 		tiles = NULL;
 		next = prev = NULL;
 		tileW = 32.f;
@@ -59,9 +56,6 @@ struct Layer
 
 	void Update ();
 	void Render (Camera &camera);
-
-	void AddEntity (Entity *ent);
-	void RemoveEntity (Entity *ent);
 };
 #endif
 

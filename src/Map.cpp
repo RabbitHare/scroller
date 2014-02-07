@@ -2,7 +2,6 @@
 #include <Tileset.h>
 #include <Camera.h>
 #include <GL/gl.h>
-#include <Entity.h>
 #include <Config.h>
 #include <Renderer.h>
 #include <Entity2.h>

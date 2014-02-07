@@ -1,7 +1,6 @@
 #ifndef __PLAYER_H__
 #define __PLAYER_H__
 
-#include <Entity.h>
 #include <Entity2.h>
 #include <Camera.h>
 #include <Keys.h>
