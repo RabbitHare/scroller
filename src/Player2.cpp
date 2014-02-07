@@ -100,7 +100,7 @@ Player2::Update ()
 
 	HandleKeys ();
 }
-static void P_Render (Entity2 *self, Camera &camera)
+static void P_Render (Entity *self, Camera &camera)
 {
 	glDisable (GL_TEXTURE_2D);
 	Vec3f r = self->halfAabb.extents;
@@ -121,7 +121,7 @@ static void P_Render (Entity2 *self, Camera &camera)
  //
  // TestGround
  //
-static void TestGround (Entity2 *self)
+static void TestGround (Entity *self)
 {
 	static const float GROUND_TEST_DIST = 2.;
 	CollisionResult result;
@@ -197,7 +197,7 @@ P_MoveToNextPosition (CollisionResult &result)
 //////////////////
 // InitPlayerEntity
 //////////////////
-static void InitPlayerEntity (Entity2 *ent)
+static void InitPlayerEntity (Entity *ent)
 {
 	ent->velocity = Vec3f (0,0,0);
 	ent->position = Vec3f (0,0,0);

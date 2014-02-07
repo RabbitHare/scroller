@@ -1,7 +1,7 @@
 #ifndef __PLAYER_H__
 #define __PLAYER_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 #include <Camera.h>
 #include <Keys.h>
 
@@ -30,7 +30,7 @@ enum PlayerAnim
 };
 struct PlayerEntity
 {
-	Entity2 ent; //must be first
+	Entity ent; //must be first
 
 	Player *player; // owner of entity
 };
@@ -38,7 +38,7 @@ struct PlayerEntity
 class Player
 {
 public:
-	Entity2 *ent;
+	Entity *ent;
 
 	Player () { }; // use InitPlayer instead
 	void Init();
@@ -74,7 +74,7 @@ public:
 	virtual void Render (Camera &camera);
 
 	virtual void ComputeNextPosition (float time);
-	void HandleCollision (Entity2 *ent, Vec3f norm);
+	void HandleCollision (Entity *ent, Vec3f norm);
 		
 	KeyBinding* GetKeyBindings ()
 	{	return mKeyBindings; }

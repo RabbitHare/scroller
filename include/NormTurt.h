@@ -1,11 +1,11 @@
 #ifndef __NORM_TURT_H__
 #define __NORM_TURT_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 
 struct NormTurt
 {
-	Entity2 ent;
+	Entity ent;
 	unsigned int animTimer;
 };
 

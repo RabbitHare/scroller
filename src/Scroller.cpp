@@ -121,7 +121,7 @@ static void
 FindStartPos(Player *player)
 {
 
-	Entity2 *e;
+	Entity *e;
 	e = g_entities;
 	// place player at first loaded start postion
 	while (e)

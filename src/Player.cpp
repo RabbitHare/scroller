@@ -70,12 +70,12 @@ static void fireCb (int kstate, Player *player)
 	player->ActionFire (kstate);
 }
 
-static void RenderCb (Entity2 *ent, Camera &cam) { ((PlayerEntity*)ent)->player->Render(cam); }
+static void RenderCb (Entity *ent, Camera &cam) { ((PlayerEntity*)ent)->player->Render(cam); }
 
-static void UpdateCb (Entity2 *ent) { ((PlayerEntity*)ent)->player->Update(); }
+static void UpdateCb (Entity *ent) { ((PlayerEntity*)ent)->player->Update(); }
 
 
-static void HandleCollisionCb (Entity2 *ent1, Entity2 *ent2, Vec3f norm) { ((PlayerEntity*)ent1)->player->HandleCollision(ent2, norm); }
+static void HandleCollisionCb (Entity *ent1, Entity *ent2, Vec3f norm) { ((PlayerEntity*)ent1)->player->HandleCollision(ent2, norm); }
 
 
 // must be length of NUM_PLAYER_COMMANDS+1
@@ -320,7 +320,7 @@ Player::ComputeNextPosition (float time)
 	GetNextPosition() = GetPosition() + GetVelocity()*time;
 }
 
-void Player::HandleCollision (Entity2 *ent2, Vec3f norm)
+void Player::HandleCollision (Entity *ent2, Vec3f norm)
 {
 	if (norm.Dot (GetVelocity()) < 0) // heading torwards entity
 	{

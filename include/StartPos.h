@@ -1,11 +1,11 @@
 #ifndef __START_POS_H__
 #define __START_POS_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 
 struct StartPos
 {
-	Entity2 ent;
+	Entity ent;
 	unsigned int animTimer;
 };
 

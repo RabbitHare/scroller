@@ -9,7 +9,7 @@
 #include <Layer.h>
 
 struct Camera;
-struct Entity2;
+struct Entity;
 
 
 
@@ -23,7 +23,7 @@ public:
 	Map ();
 	~Map ();
 	void Clear ();
-	void CollisionCheck (Entity2 &entity,CollisionResult &result);
+	void CollisionCheck (Entity &entity,CollisionResult &result);
 	void Update ();
 	void Render (Camera &camera);
 

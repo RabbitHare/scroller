@@ -134,7 +134,7 @@ void EditorSaveLevel (const char *fn)
 
 	// objects
 	xmlTextWriterStartElement (writer, BAD_CAST "objects");
-	Entity2 *e = g_entities;
+	Entity *e = g_entities;
 	while (e)
 	{
 		if (!e->dead)

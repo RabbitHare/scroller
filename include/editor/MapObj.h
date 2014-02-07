@@ -2,11 +2,11 @@
 #define __MAP_OBJ_H__
 
 #include <libxml/xmlwriter.h>
-#include <Entity2.h>
+#include <Entity.h>
 
 struct MapObj // used in the editor`
 {
-	Entity2 ent;
+	Entity ent;
 	int type; // index into list of containing unmodifieable data, i.e. name, description etc.
 };
 

@@ -5,7 +5,7 @@
 StartPos* NewStartPos ()
 {
 
-	Entity2 *ent = NewEntity ();
+	Entity *ent = NewEntity ();
 	StartPos *self = START_POS(ent);
 
 	ent->type = ET_START;

@@ -50,7 +50,7 @@ static void DrawName (Vec3f pos, const char *text)
 }
 
 static void
-RenderCb (Entity2 *ent, Camera &cam)
+RenderCb (Entity *ent, Camera &cam)
 {
 	if (ent->dead) return;
 

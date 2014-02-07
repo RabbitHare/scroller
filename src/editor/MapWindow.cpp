@@ -1036,7 +1036,7 @@ write_tiles (MapWindow *mw)
 	// remove map object if necessary
 	if (G.selTiles.height*G.selTiles.width == 1 && G.selTiles.tiles[0] == 0)
 	{
-		Entity2 *e = g_entities;
+		Entity *e = g_entities;
 		while (e)
 		{
 			if (int(ms.x) == int(e->pos.x/lay->tileW) && -int(ms.y) == int(e->pos.y/lay->tileH))

@@ -49,7 +49,7 @@ void GameLoadLevel (const char *fn)
 			n = node->xmlChildrenNode;
 
 			value = NULL;
-			Entity2 *ent = NULL;
+			Entity *ent = NULL;
 			while (n)
 			{
 				if (!xmlStrcmp (n->name, BAD_CAST "name"))

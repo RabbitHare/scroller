@@ -5,15 +5,15 @@
 #include <Camera.h>
 
 
-struct Entity2
+struct Entity
 {
-	void (*Update) (Entity2 *ent);
-	void (*Render) (Entity2 *ent, Camera &camera);
-	void (*HandleCollision) (Entity2 *ent1, Entity2 *ent2, Vec3f norm);
-	void (*Delete) (Entity2 *ent); //destructor, called by DeleteEntity
+	void (*Update) (Entity *ent);
+	void (*Render) (Entity *ent, Camera &camera);
+	void (*HandleCollision) (Entity *ent1, Entity *ent2, Vec3f norm);
+	void (*Delete) (Entity *ent); //destructor, called by DeleteEntity
 
-	Entity2 *next,*prev;
-	Entity2 *owner; // for bullets; who fired them
+	Entity *next,*prev;
+	Entity *owner; // for bullets; who fired them
 	int type;
 	bool used;
 	float age; // in miliseconds
@@ -26,7 +26,7 @@ struct Entity2
 	Bounds bounds;
 	int collWith; // types of objects it collides with
 	CollisionResult cres;
-	Entity2 *cent,
+	Entity *cent,
 		*entrc;
 	bool cdone;
 	bool ccheck;
@@ -36,15 +36,15 @@ struct Entity2
 };
 struct EntityMem // used for allicating array
 {
-	Entity2 ent;	
+	Entity ent;	
 	char extData[128];
 };
-#define ENTITY(a) ((Entity2*)(a))
+#define ENTITY(a) ((Entity*)(a))
 
-void InitEntity (Entity2* e);
+void InitEntity (Entity* e);
 void InitEntities ();
-Entity2* NewEntity ();
-void DeleteEntity (Entity2 *e);
+Entity* NewEntity ();
+void DeleteEntity (Entity *e);
 
 
 #endif

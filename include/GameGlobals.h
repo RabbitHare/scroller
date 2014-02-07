@@ -2,7 +2,7 @@
 #define __G_GLOBALS_H__
 
 #include <Sprite.h>
-#include <Entity2.h>
+#include <Entity.h>
 #include <GObjType.h>
 
 struct Player;
@@ -16,7 +16,7 @@ extern Sprite g_sprites[NUM_SPRITES]; // defined in Sprite.cpp
 #define MAX_ENTITIES 200
 extern EntityMem g_entityPool[MAX_ENTITIES]; // defined in Entity.cpp
 extern int g_numEntities;
-extern Entity2 *g_entities; // defined in Entity.cpp
+extern Entity *g_entities; // defined in Entity.cpp
 
 #define MAX_GOBJ_TYPES 500
 extern GObjType g_objTypes[MAX_GOBJ_TYPES]; //defined in GObjType.h

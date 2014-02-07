@@ -1,11 +1,11 @@
 #ifndef __BULLET1_H__
 #define __BULLET1_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 
 struct Bullet1
 {
-	Entity2 ent;
+	Entity ent;
 	unsigned int animTimer;
 };
 

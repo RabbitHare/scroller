@@ -30,7 +30,7 @@ struct CTri
 	Vec2f norms[3]; // edge normals
 };
 
-struct Entity2;
+struct Entity;
 
 struct CollisionResult
 {
@@ -39,7 +39,7 @@ struct CollisionResult
 	float epsilon;
 	Vec3f normal;
 	bool hasCollided;
-	Entity2 *ent;
+	Entity *ent;
 	inline CollisionResult ()
 	{
 		fraction = 1.0;
@@ -52,8 +52,8 @@ struct CollisionResult
 void HalfAabbCollisionTriangle (const Bounds &aabb, const Vec3f &startPos, const Vec3f &endPos, const CTri &tri, CollisionResult &result);
 void HalfAabbCollisionHalfAabb (const Bounds &aabb1, const Vec3f &startPos, const Vec3f &endPos,
 				const Bounds &aabb2, const Vec3f &pos2, CollisionResult &result);
-void EntityCollisionCheckWorld (Entity2 *ent, CollisionResult &result);
-void EntityCollisionCheckMap (Entity2 *ent, CollisionResult &result);
+void EntityCollisionCheckWorld (Entity *ent, CollisionResult &result);
+void EntityCollisionCheckMap (Entity *ent, CollisionResult &result);
 void CollisionCheckWorld (); //check everything with everything
 
 

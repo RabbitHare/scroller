@@ -1,9 +1,9 @@
-#include <Entity2.h>
+#include <Entity.h>
 #include <GameGlobals.h>
 #include <stdio.h>
 
 EntityMem g_entityPool[MAX_ENTITIES];
-Entity2 *g_entities=NULL;
+Entity *g_entities=NULL;
 int g_numEntities=0;
 
 void InitEntities ()
@@ -16,7 +16,7 @@ void InitEntities ()
 	g_entities->dead=false;
 	g_entities->next = g_entities->prev = NULL;
 }
-void InitEntity (Entity2* e)
+void InitEntity (Entity* e)
 {
 	e->type = ET_INVALID;
 	e->collWith = 0;
@@ -33,12 +33,12 @@ void InitEntity (Entity2* e)
 	e->HandleCollision = NULL;
 }
 // Finds unused entity, initalizes it, and adds to global list of entities
-Entity2* NewEntity ()
+Entity* NewEntity ()
 {
 	if (g_entities == NULL)
 		InitEntities ();
 
-	Entity2 *e = NULL;
+	Entity *e = NULL;
 	for (int i=0; i < MAX_ENTITIES; i++)
 		if (!ENTITY(g_entityPool+i)->used)
 		{
@@ -62,7 +62,7 @@ Entity2* NewEntity ()
 	g_numEntities++;
 	return e;
 }
-void DeleteEntity (Entity2 *e)
+void DeleteEntity (Entity *e)
 {
 	if (e->Delete)
 		e->Delete (e);

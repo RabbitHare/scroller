@@ -4,7 +4,7 @@
 #include <GL/gl.h>
 #include <Config.h>
 #include <Renderer.h>
-#include <Entity2.h>
+#include <Entity.h>
 #include <GameGlobals.h>
 
 #include <libxml/xmlwriter.h>
@@ -37,7 +37,7 @@ void Map::Clear ()
 	if (GetNumTilesets())
 		PurgeTilesets();
 }	
-void Map::CollisionCheck (Entity2 &entity, CollisionResult &result)
+void Map::CollisionCheck (Entity &entity, CollisionResult &result)
 {
 	Layer *lay = &layers[0]; //FIXME
 	Tileset &tileset = *GetTileset (lay->tileset);
@@ -110,12 +110,12 @@ void Map::Update ()
 {
 	for (size_t i=0; i < layers.size(); i++)
 		layers[i].Update();
-	Entity2 *e;
+	Entity *e;
 	e = g_entities;
 	//remove entities flagged for deletion first
 	while (e)
 	{
-		Entity2 *n = e->next;
+		Entity *n = e->next;
 		if (e->destroy)
 			DeleteEntity (e);
 		e = n;

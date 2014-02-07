@@ -1,7 +1,7 @@
 #ifndef __UNDO_SYS_H__
 #define __UNDO_SYS_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 
 struct Layer;
 struct MapObj;

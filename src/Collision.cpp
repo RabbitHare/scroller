@@ -1,5 +1,5 @@
 #include <Collision.h>
-#include <Entity2.h>
+#include <Entity.h>
 #include <Map.h>
 #include <GameGlobals.h>
 
@@ -234,11 +234,11 @@ void HalfAabbCollisionHalfAabb (const Bounds &aabb1, const Vec3f &startPos, cons
 }
 
 void
-EntityCollisionCheckWorld (Entity2 *ent1, CollisionResult &result)
+EntityCollisionCheckWorld (Entity *ent1, CollisionResult &result)
 {
 	Map &map = *GetMap();
 	CollisionResult res;
-	Entity2 *e = g_entities;
+	Entity *e = g_entities;
 	while (e)
 	{
 		
@@ -261,7 +261,7 @@ EntityCollisionCheckWorld (Entity2 *ent1, CollisionResult &result)
 	
 	result.hasCollided = false;
 	result.fraction = 1000.;
-	Entity2 *ent2 = g_entities;
+	Entity *ent2 = g_entities;
 	while (ent2)
 	{
 		if (ent2 == ent1 || ent2->cdone)//  || ent2->ccycle > cycle)
@@ -295,7 +295,7 @@ EntityCollisionCheckWorld (Entity2 *ent1, CollisionResult &result)
 
 }
 
-void EntityCollisionCheckMap (Entity2 *ent, CollisionResult &result)
+void EntityCollisionCheckMap (Entity *ent, CollisionResult &result)
 {
 	GetMap()->CollisionCheck (*ent, result);
 }
@@ -303,7 +303,7 @@ void EntityCollisionCheckMap (Entity2 *ent, CollisionResult &result)
 void CollisionCheckWorld ()
 {
 	Map &map = *GetMap();
-	Entity2 *ent = g_entities;
+	Entity *ent = g_entities;
 	int i;
 	while (ent)
 	{
@@ -324,7 +324,7 @@ void CollisionCheckWorld ()
 
 		ent = ent->next;
 	}
-	Entity2 *ent1,*ent2,
+	Entity *ent1,*ent2,
 		*cent1,*cent2;
 	ent1 = g_entities;
 	CollisionResult res,result;

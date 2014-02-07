@@ -1,7 +1,7 @@
 #ifndef __PLAYER2_H__
 #define __PLAYER2_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 #include <Camera.h>
 #include <Keys.h>
 
@@ -35,7 +35,7 @@ public:
 	void Update ();
 
 	// it's entity
-	Entity2 *entity;
+	Entity *entity;
 private:
 
 	HalfAabb mHalfAabb;

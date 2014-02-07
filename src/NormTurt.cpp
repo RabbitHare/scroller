@@ -10,9 +10,9 @@ static float gravity = 0.5;
 static float maxFallSpeed = -25.0;
 static float walkSpeed = 1.;
 
-static void ComputeNextPosition (Entity2 *ent, float time);
+static void ComputeNextPosition (Entity *ent, float time);
 
-static void TestGround (Entity2 *ent)
+static void TestGround (Entity *ent)
 {
 	static const float GROUND_TEST_DIST = 5.;
 	// check to see if there's ground below but a ways ahead and turn around if ground ends
@@ -36,7 +36,7 @@ static void TestGround (Entity2 *ent)
 
 }
 
-static void UpdateCb (Entity2 *ent)
+static void UpdateCb (Entity *ent)
 {
 	TestGround (ent);
 
@@ -53,13 +53,13 @@ static void UpdateCb (Entity2 *ent)
 	NORM_TURT (ent)->animTimer++;
 }
 
-static void ComputeNextPosition (Entity2 *ent, float time)
+static void ComputeNextPosition (Entity *ent, float time)
 {
 	ent->nextPos = ent->pos + ent->vel*time;
 }
 
 static void
-HandleCollision (Entity2 *ent, Entity2 *ent2, Vec3f norm)
+HandleCollision (Entity *ent, Entity *ent2, Vec3f norm)
 {
 
 	if (ent2 && ent2->type & ET_BULLET && !ent->destroy)
@@ -93,7 +93,7 @@ int static GetAnimFrame (NormTurt *nt, float fps)
 	// NOTE: mAnimTimer is running at the physics fps
 	return float(nt->animTimer)/PHYSICS_FPS * fps;
 }
-static void RenderCb (Entity2 *ent, Camera &cam)
+static void RenderCb (Entity *ent, Camera &cam)
 {
 	//NormTurt *self = NORM_TURT (ent);
 	Vec3f r,p;
@@ -164,7 +164,7 @@ static void RenderCb (Entity2 *ent, Camera &cam)
 NormTurt* NewNormTurt ()
 {
 
-	Entity2 *ent = NewEntity ();
+	Entity *ent = NewEntity ();
 	NormTurt *self = NORM_TURT(ent);
 
 	ent->type = ET_ENEMY;

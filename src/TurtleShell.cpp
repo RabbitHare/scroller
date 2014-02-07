@@ -9,10 +9,10 @@ static float gravity = 0.25;
 static float maxFallSpeed = -25.0;
 
 
-static void ComputeNextPosition (Entity2 *ent, float time);
+static void ComputeNextPosition (Entity *ent, float time);
 
 
-static void UpdateCb (Entity2 *ent)
+static void UpdateCb (Entity *ent)
 {
 	if (ent->vel.y > maxFallSpeed)
 	{
@@ -25,13 +25,13 @@ static void UpdateCb (Entity2 *ent)
 	TURTLE_SHELL (ent)->animTimer++;
 }
 
-static void ComputeNextPosition (Entity2 *ent, float time)
+static void ComputeNextPosition (Entity *ent, float time)
 {
 	ent->nextPos = ent->pos + ent->vel*time;
 }
 
 static void
-HandleCollision (Entity2 *ent, Entity2 *ent2, Vec3f norm)
+HandleCollision (Entity *ent, Entity *ent2, Vec3f norm)
 {
 
 	if (ent2 && fabs(norm.x) > .8)
@@ -63,7 +63,7 @@ int static GetAnimFrame (TurtleShell *nt, float fps)
 	// NOTE: mAnimTimer is running at the physics fps
 	return float(nt->animTimer)/PHYSICS_FPS * fps;
 }
-static void RenderCb (Entity2 *ent, Camera &cam)
+static void RenderCb (Entity *ent, Camera &cam)
 {
 	//TurtleShell *self = TURTLE_SHELL (ent);
 	Vec3f r,p;
@@ -126,7 +126,7 @@ static void RenderCb (Entity2 *ent, Camera &cam)
 TurtleShell* NewTurtleShell ()
 {
 
-	Entity2 *ent = NewEntity ();
+	Entity *ent = NewEntity ();
 	TurtleShell *self = TURTLE_SHELL(ent);
 
 	ent->type = ET_BULLET | ET_SHELL;

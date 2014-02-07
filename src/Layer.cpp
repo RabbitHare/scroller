@@ -3,7 +3,7 @@
 #include <Camera.h>
 #include <Tileset.h>
 #include <GL/gl.h>
-#include <Entity2.h>
+#include <Entity.h>
 #include <GameGlobals.h>
 
 void Layer::Update ()
@@ -60,7 +60,7 @@ void Layer::Render (Camera &camera)
 			ent->Render (camera);
 			*/
 
-		Entity2 *e;
+		Entity *e;
 		e = g_entities;
 		while (e)
 		{

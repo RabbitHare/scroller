@@ -1,11 +1,11 @@
 #ifndef __TURTLE_SHELL_H__
 #define __TURTLE_SHELL_H__
 
-#include <Entity2.h>
+#include <Entity.h>
 
 struct TurtleShell
 {
-	Entity2 ent;
+	Entity ent;
 	unsigned int animTimer;
 };
 
