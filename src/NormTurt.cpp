@@ -15,7 +15,7 @@ static void ComputeNextPosition (Entity2 *ent, float time);
 static void TestGround (Entity2 *ent)
 {
 	static const float GROUND_TEST_DIST = 5.;
-	// check to see if there's ground below but a ways ahead and turn around of ground ends
+	// check to see if there's ground below but a ways ahead and turn around if ground ends
 	float posx = ent->pos.x;
 	int facing = 1;
 	if (ent->vel.x < 0) facing = -1;
