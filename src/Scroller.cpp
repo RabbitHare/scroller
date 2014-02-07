@@ -116,6 +116,24 @@ ParseArgs (int argc, char *argv[])
 		exit(0);
 	}
 }
+
+static void
+FindStartPos(Player *player)
+{
+
+	Entity2 *e;
+	e = g_entities;
+	// place player at first loaded start postion
+	while (e)
+	{
+		if (e->type == ET_START)
+		{
+			player->SetPosition (e->pos); // defualt start pos
+			break;
+		}
+		e = e->next;
+	}
+}
 int main (int argc, char *argv[])
 {
 	srand (time (NULL));
@@ -124,14 +142,17 @@ int main (int argc, char *argv[])
 
 	//Add a player
 	Player *player = NewPlayer();
-	player->SetPosition (Vec3f (288.0, -192.0, 0.1));
+	player->SetPosition (Vec3f (288.0, -192.0, 0.1)); // defualt start pos
 
 	LoadConfigFile ("config.xml");
 	//InitVideo (640,480);
 
 	Map &map = *GetMap();
 
-	ParseArgs (argc, argv);
+	ParseArgs (argc, argv); // loads level file
+
+	FindStartPos(player);
+	
 
 	// Renderer
 	SetRenderer (&renderer);

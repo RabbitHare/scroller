@@ -36,6 +36,7 @@ enum EntityType
 	ET_ENEMY = 1<<2,
 	ET_BULLET = 1<<3,
 	ET_SHELL = 1<<4,
+	ET_START = 1<<5,
 	ET_ALL = 0xFFFFFFFF
 };
 

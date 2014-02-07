@@ -20,7 +20,8 @@ src = [	'ObjLoader.cpp',
 	'GameLoadSave.cpp',
 	'Bullet1.cpp',
 	'TurtleShell.cpp',
-	'NormTurt.cpp']
+	'NormTurt.cpp',
+	'StartPos.cpp']
 
 objs = env.SharedObject(src)
 gameObjs.append(objs)

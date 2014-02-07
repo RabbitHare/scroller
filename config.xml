@@ -8,7 +8,7 @@
 		<keyboard1>
 			<right>keyRight</right>
 			<left>keyLeft</left>
-			<up>keyUp</up>
+			<up>keyU</up>
 			<down>keyDown</down>
 			<jump>keySpace</jump>
 			<run>keyLShift</run>

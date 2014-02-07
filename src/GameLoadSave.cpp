@@ -1,6 +1,7 @@
 #include <GameLoadSave.h>
 #include <Map.h>
 #include <NormTurt.h>
+#include <StartPos.h>
 
 void GameLoadLevel (const char *fn)
 {
@@ -60,6 +61,11 @@ void GameLoadLevel (const char *fn)
 						if (!strcmp("NormTurt",(char*)value))
 						{
 							ent = ENTITY(NewNormTurt ());
+							break;
+						}
+						else if (!strcmp("StartPos",(char*)value))
+						{
+							ent = ENTITY(NewStartPos ());
 							break;
 						}
 						else std::cout << "Unknown Entity: " << (char*)value << "\n";

@@ -7,133 +7,18 @@
 </position>
     </object>
     <object>
-      <name>NormTurt</name>
-      <position>( 592 -144 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 688 -16 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 1072 -240 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 1712 -112 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 1392 -272 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 1584 -80 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 3440 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 3376 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 3312 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 3216 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 3056 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 2896 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 2672 -496 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 48 -176 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 400 -16 0.1 )
-</position>
-    </object>
-    <object>
-      <name>Bee</name>
-      <position>( 240 -240 0.1 )
-</position>
-    </object>
-    <object>
       <name>StartPos</name>
-      <position>( 176 -48 0.1 )
+      <position>( 208 -48 0.1 )
 </position>
     </object>
     <object>
-      <name>Bee</name>
-      <position>( 464 -208 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 208 -560 0.1 )
+      <name/>
+      <position>( 0 0 0 )
 </position>
     </object>
     <object>
       <name>NormTurt</name>
-      <position>( 304 -560 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 400 -560 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 496 -560 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 592 -560 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 784 -528 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 912 -560 0.1 )
-</position>
-    </object>
-    <object>
-      <name>NormTurt</name>
-      <position>( 1040 -560 0.1 )
+      <position>( 400 -240 0.1 )
 </position>
     </object>
     <object>
@@ -143,7 +28,137 @@
     </object>
     <object>
       <name>NormTurt</name>
-      <position>( 400 -240 0.1 )
+      <position>( 1040 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 912 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 784 -528 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 592 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 496 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 400 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 304 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 208 -560 0.1 )
+</position>
+    </object>
+    <object>
+      <name>Bee</name>
+      <position>( 464 -208 0.1 )
+</position>
+    </object>
+    <object>
+      <name>Bee</name>
+      <position>( 240 -240 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 400 -16 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 48 -176 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 2672 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 2896 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 3056 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 3216 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 3312 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 3376 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 3440 -496 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 1584 -80 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 1392 -272 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 1712 -112 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 1072 -240 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 688 -16 0.1 )
+</position>
+    </object>
+    <object>
+      <name>NormTurt</name>
+      <position>( 592 -144 0.1 )
+</position>
+    </object>
+    <object>
+      <name/>
+      <position>( 0 0 0 )
+</position>
+    </object>
+    <object>
+      <name/>
+      <position>( 0 0 0 )
 </position>
     </object>
     <object>
