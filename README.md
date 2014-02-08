@@ -5,13 +5,13 @@ A sidescroller game engine.
 
 Directions:
 
-To compile the game:
+To compile the game:<b>
 scons
 
-To compile the editor & game:
+To compile the editor & game:<b>
 scons editor=1
 
-To run game:
-./scroller <path to .lvl file>
+To run game:<b>
+./scroller \<path to .lvl file\>
 
 
