@@ -1,8 +1,0 @@
-#ifndef __EDITOR_LOAD_SAVE_H__
-#define __EDITOR_LAOD_SAVE_H__
-
-void EditorLoad (const char *fn);
-void EditorSave (const char *fn);
-
-#endif
-

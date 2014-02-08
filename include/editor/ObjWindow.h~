@@ -1,7 +1,0 @@
-#ifndef __OBJ_WINDOW_H__
-#define __OBJ_WINDOW_H__
-
-void open_object_window (float x, float y);
-
-#endif
-

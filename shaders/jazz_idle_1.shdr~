@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<shader>
-  <texture>"jazz_idle_1.png"</texture>
-  <interp>linear</interp>
-</shader>
-

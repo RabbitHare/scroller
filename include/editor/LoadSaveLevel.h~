@@ -1,7 +1,0 @@
-#ifndef __LOAD_SAVE_LEVEL_H__
-#define __LOAD_SAVE_LEVEL_H__
-
-void LoadLevel (const char* fn);
-void SaveLevel (const char* fn);
-
-#endif
