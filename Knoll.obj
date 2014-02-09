@@ -1,5 +1,6 @@
 # Blender3D v245 OBJ File: tset.blend
 # www.blender3d.org
+mtllib Knoll.mtl
 v 20.126738 25.658890 -26.200048
 v 20.629629 -32.000099 -26.212807
 v -15.138127 26.201466 -26.200048
@@ -3826,7 +3827,7 @@ vt 0.686999 0.919137 0.0
 vt 0.798959 0.884520 0.0
 vt 0.686999 0.919137 0.0
 vt 0.686999 0.884520 0.0
-usemtl Material_tset.tga
+usemtl Knoll
 s off
 f 50/1 34/2 13/3
 f 50/4 13/5 37/6
