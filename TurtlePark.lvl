@@ -168,7 +168,7 @@
     </object>
   </objects>
   <tilesets>
-    <tileset>test.tset</tileset>
+    <tileset>Knoll.tset</tileset>
   </tilesets>
   <layer>
     <width>256</width>
